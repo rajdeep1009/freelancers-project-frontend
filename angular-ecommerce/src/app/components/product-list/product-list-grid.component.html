@@ -1,0 +1,32 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <h4>{{ currentCategoryDescription }} freelancers</h4>
+        <hr>
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- Loop Over collection of freelancers-->
+                <div class="col-md-3" *ngFor="let tempFreelancer of freelancers">
+                    <div class="product-box">
+                        <a routerLink="/freelancer-details/{{ tempFreelancer.name }}">
+                            <img src="{{ tempFreelancer.imageUrl }}" class="img-responsive">
+                        </a><br>
+                        <a routerLink="/freelancer-details/{{ tempFreelancer.name }}">
+                            <h1>{{ tempFreelancer.name }}</h1>
+                        </a>
+                        <h2>{{ tempFreelancer.description }}</h2>
+                        <div class="price">{{ tempFreelancer.charge | currency:'INR'}}</div>
+                        <a href="#" class="primary-btn">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Displaying a user message if no product is found -->
+                <div *ngIf="freelancers?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                    No products found!
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

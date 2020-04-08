@@ -1,0 +1,23 @@
+<table class="table">
+    <thead class="thead thead-dark">
+        <tr>
+            <th></th>
+            <th>Freelancer Name</th>
+            <th>Charge</th>
+            <th>Age</th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let tempEmployee of employees.data">
+            <td class="align-middle">
+                <img src="/assets/placeholder1.jpg" height="100"/>
+            </td>
+            <td class="align-middle">{{ tempEmployee.employee_name }}</td>
+            <td class="align-middle">{{ tempEmployee.employee_salary | currency:'INR'}}</td>
+            <td class="align-middle">{{ tempEmployee.employee_age }}</td>
+
+        </tr>
+    </tbody>
+</table>

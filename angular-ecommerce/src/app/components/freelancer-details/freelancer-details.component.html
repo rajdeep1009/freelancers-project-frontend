@@ -1,0 +1,26 @@
+<div class="detail-section">
+
+    <div class="container-fluid">
+        <br>
+        <img src="{{ freelancer[0].imageUrl }}" class="detail-img" height=50>
+
+        <h3> {{freelancer[0].name}} </h3>
+
+        <div class="price">{{ freelancer[0].charge | currency:'USD'}}</div>
+        <a href="#" class="primary-btn">Contact</a>
+
+        <hr>
+        <h5 class="active-link">Description</h5>
+        <p>{{ freelancer[0].description }}</p>
+
+        <h5 class="active-link">Contact Information</h5>
+        <p>
+            Email: {{ freelancer[0].email }}<br>
+            Contact Number: {{ freelancer[0].phone}}
+        </p>
+
+        <a routerLink="/products" class="mt-5">Back to Freelancers List</a>
+
+    </div>
+
+</div>
