@@ -16,7 +16,7 @@
                         </a>
                         <h2>{{ tempFreelancer.description }}</h2>
                         <div class="price">{{ tempFreelancer.charge | currency:'INR'}}</div>
-                        <a href="#" class="primary-btn">Contact</a>
+                        <button (click)="addToCart(tempFreelancer)" class="primary-btn">Add to Contact List</button>
                     </div>
                 </div>
 

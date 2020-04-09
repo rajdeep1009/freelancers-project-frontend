@@ -9,6 +9,7 @@ import {Routes, RouterModule, Router} from '@angular/router';
 import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { FreelancerDetailsComponent } from './components/freelancer-details/freelancer-details.component';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
 
 const routes : Routes = [
   {path: 'freelancer-details/:name', component: FreelancerDetailsComponent},
@@ -26,7 +27,8 @@ const routes : Routes = [
     ProductListComponent,
     CategoryMenuComponent,
     SearchComponent,
-    FreelancerDetailsComponent
+    FreelancerDetailsComponent,
+    CartStatusComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
